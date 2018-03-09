@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Hexo</title>
+
+<!-- meta -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- css -->
+<link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+<link rel="stylesheet" href="/css/bootstrap.min.css">
+<link rel="stylesheet" href="/css/custom.css">
+<link rel="stylesheet" href="/css/pace.css">
+
+<!-- js -->
+
+<script src="/js/bootstrap.min.js"></script>
+<script src="/js/jquery-2.1.3.min.js"></script>
+<script src="/js/modernizr.custom.js"></script>
+<script src="/js/pace.min.js"></script>
+<script src="/js/script.js"></script>
+
+
+<link rel="shortcut icon" href="/favicon.ico">
+
+</head>
+
+<body>
+<div class="container">
+    <header id="site-header">
+        <div class="row">
+            <div class="col-md-4 col-sm-5 col-xs-8">
+                <div class="logo">
+                    <h1><a href="/"><b>YunfeiHe&#39;s Blog</b></a></h1>
+                </div>
+            </div><!-- col-md-4 -->
+            <div class="col-md-8 col-sm-7 col-xs-4">
+                <nav class="main-nav" role="navigation">
+                    <div class="navbar-header">
+                        <button type="button" id="trigger-overlay" class="navbar-toggle">
+                            <span class="ion-navicon"></span>
+                        </button>
+                    </div>
+
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="cl-effect-11"><a href="/" data-hover="主页">主页</a></li>
+                        <li class="cl-effect-11"><a href="/about" data-hover="关于">关于</a></li>
+                        <li class="cl-effect-11"><a href="/contact" data-hover="联系">联系</a></li>
+                    </ul>
+                </div><!-- /.navbar-collapse -->
+                </nav>
+                
+                <!-- search box -->
+                <!-- <div id="header-search-box">
+                    <a id="search-menu" href="#"><span id="search-icon" class="ion-ios-search-strong"></span></a>
+                    <div id="search-form" class="search-form">
+                        <form role="search" method="get" id="searchform" action="#">
+                            <input type="search" placeholder="搜索" required>
+                            <button type="submit"><span class="ion-ios-search-strong"></span></button>
+                        </form>
+                    </div>
+                </div> -->
+
+            </div><!-- col-md-8 -->
+        </div>
+    </header>
+</div>
+
+
+<div class="content-body">
+    <div class="container">
+        <div class="row">
+            <main class="col-md-8">
+                    <article class="post">
+        <header class="entry-header">
+            <h1 class="entry-title">hexo搭建博客</h1>
+            <div class="entry-meta">
+                <!-- <span class="post-category"><a href="#">分类名字</a></span> -->
+                <span class="post-date"><a href="#"><time class="entry-date">2018-03-09</time></a></span>
+                <span class="post-author"><a href="#">John Doe</a></span>
+            </div>
+        </header>
+        <div class="entry-content clearfix">
+            <h2 id="一、准备"><a href="#一、准备" class="headerlink" title="一、准备"></a>一、准备</h2><h3 id="1-1-安装node-js"><a href="#1-1-安装node-js" class="headerlink" title="1-1 安装node.js"></a>1-1 安装node.js</h3><blockquote>
+<p>Node.js 官网: <a href="http://nodejs.cn/" target="_blank" rel="noopener">http://nodejs.cn/</a></p>
+</blockquote>
+<h3 id="1-2-安装-git"><a href="#1-2-安装-git" class="headerlink" title="1-2 安装 git"></a>1-2 安装 git</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install git -y</span><br></pre></td></tr></table></figure>
+<h3 id="1-3-安装-hexo-cli"><a href="#1-3-安装-hexo-cli" class="headerlink" title="1-3 安装 hexo-cli"></a>1-3 安装 hexo-cli</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-cli -g</span><br></pre></td></tr></table></figure>
+<h2 id="二、-搭建博客"><a href="#二、-搭建博客" class="headerlink" title="二、 搭建博客"></a>二、 搭建博客</h2><h3 id="2-1-初始化博客"><a href="#2-1-初始化博客" class="headerlink" title="2-1 初始化博客"></a>2-1 初始化博客</h3><ul>
+<li><p>创建目录</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mkdir hexo-blog</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>进入目录</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cd hexo-blog</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>初始化</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># 初始化命令必须在空目录中进行</span><br><span class="line">hexo init</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="2-2-安装主题-simple-black"><a href="#2-2-安装主题-simple-black" class="headerlink" title="2-2 安装主题 simple-black"></a>2-2 安装主题 simple-black</h3><blockquote>
+<p>备用地址 链接：<a href="https://pan.baidu.com/s/1EmZL5RJ3y0FoT8b-fzZixw" target="_blank" rel="noopener">https://pan.baidu.com/s/1EmZL5RJ3y0FoT8b-fzZixw</a> 密码：bvoj</p>
+</blockquote>
+<ul>
+<li><p>安装主题依赖</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-renderer-ejs --save</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>下载主题</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># 将下载的 `simple-black`目录(和README.md同级的)放到`hexo-blog/themes` 目录下即可</span><br><span class="line">git clone https://github.com/yunfeihe/simple-black.git</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>修改博客的标题</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># 编辑 themes/simple/_config.yml</span><br><span class="line">blog_title: Blog</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>修改博客的语言为中文</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># 编辑 themes/simple/_config.yml</span><br><span class="line">language: zh-CN</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h2 id="生成常用的页面"><a href="#生成常用的页面" class="headerlink" title="生成常用的页面"></a>生成常用的页面</h2><h2 id="部署"><a href="#部署" class="headerlink" title="部署"></a>部署</h2><blockquote>
+<p>官方部署文档: <a href="https://hexo.io/zh-cn/docs/deployment.html" target="_blank" rel="noopener">https://hexo.io/zh-cn/docs/deployment.html</a></p>
+</blockquote>
+<h3 id="git-部署"><a href="#git-部署" class="headerlink" title="git 部署"></a>git 部署</h3><ul>
+<li><p>安装依赖</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>配置</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"># 编辑 hexo-blog/_config.yml</span><br><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repo: git@github.com:yunfeihe/simple-black.git</span><br><span class="line"># 记得更换为你自己的仓库地址</span><br></pre></td></tr></table></figure></li>
+</ul>
+
+        </div>
+    </article>
+
+<nav class="page-nav">
+  
+</nav>
+
+
+            </main>
+            <aside class="col-md-4">
+
+    <div class="widget widget-archives">
+        <h3 class="widget-title">归档</h3>
+        <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/03/">2018 三月</a></li></ul>
+    </div>
+
+    <div class="widget widget-category">
+        <h3 class="widget-title">分类</h3>
+        
+    </div>
+
+    <div class="widget widget-tag-cloud">
+        <h3 class="widget-title">标签</h3>
+        <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo/">Hexo</a></li></ul>
+    </div>
+
+    <!-- <div class="rss">
+        <a href=""><span class="ion-social-rss-outline"></span> RSS 订阅</a>
+    </div> -->
+</aside>
+
+        </div>
+    </div>
+</div>
+
+<footer id="site-footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <p class="copyright">Hexo</p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- Mobile Menu -->
+<div class="overlay overlay-hugeinc">
+    <button type="button" class="overlay-close"><span class="ion-ios-close-empty"></span></button>
+    <nav>
+        <ul>
+            <li><a href="/">首页</a></li>
+            <li><a href="/about">关于</a></li>
+            <li><a href="/contact">联系</a></li>
+        </ul>
+    </nav>
+</div>
+
+
+<script src="/js/script.js"></script>
+
+</body>
+</html>
